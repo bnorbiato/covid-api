@@ -1,0 +1,36 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 950px;
+    padding: 15px 0 0 0;
+}
+
+h2 {
+    color: #EF5B25;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #3eb63e;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #3eb63e;
+    font-weight: bold;
+}
+
+.menu {
+    text-align: center;
+}
+
+.row .col-6 {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+}

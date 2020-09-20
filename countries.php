@@ -1,10 +1,10 @@
 <?php
-$url = "https://api.covid19api.com/summary";
+$url = "https://api.covid19api.com/countries";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-$covid = json_decode(curl_exec($ch));
+$covidcountries = json_decode(curl_exec($ch));
 ?>
 
 <!doctype html>
@@ -20,35 +20,27 @@ $covid = json_decode(curl_exec($ch));
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet">
 
-        <title>covid api</title>
+        <title>countries - covid api</title>
     </head>
 
     <body>
         <div class="menu">
             <div class="container">
                 <h2>covid status</h2>
-                <a href="countries.php">see all countries</a>
+                <a href="index.php">home</a>
             </div>
         </div>
 
-        <div class="cases">
+        <div class="countries">
             <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <h3>cases</h3>
-                        <div class="numbers">
-                            <p><strong>New confirmed: </strong><?=$covid->Global->NewConfirmed?></p>
-                            <p><strong>Total confirmed: </strong><?=$covid->Global->TotalConfirmed?></p>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h3>deaths</h3>
-                        <div class="numbers">
-                            <p><strong>New deaths: </strong><?=$covid->Global->NewDeaths?></p>
-                            <p><strong>Total deaths: </strong><?=$covid->Global->TotalDeaths?></p>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                    <?php
+                        foreach($covidcountries as $country) { ?>
+                            <li>
+                                <?= $country->Country?>
+                            </li>
+                    <?php } ?>
+                </ul>
             </div>
         </div>
     
