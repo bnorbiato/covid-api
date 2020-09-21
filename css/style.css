@@ -2,35 +2,99 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    width: 950px;
-    padding: 15px 0 0 0;
+.menu {
+    background-color: #3145b6;
+    text-align: center;
 }
 
-h2 {
-    color: #EF5B25;
+.container {
+    width: 950px;
+    padding: 30px 0;
+}
+
+h2, .subtitle {
+    color: white;
+}
+
+h3 {
+    border-bottom: 4px solid #3145b6;
+    width: 10%;
 }
 
 p {
     margin: 0;
 }
 
-a {
-    color: #3eb63e;
-    transition: 0.5s;
+span {
+    color: white;
 }
 
 a:hover {
-    color: #3eb63e;
-    font-weight: bold;
+    text-decoration: none;
 }
 
-.menu {
+.link-list {
     text-align: center;
+    margin-top: 30px;
 }
+
+.link-list .more {
+    color: #0055a0;
+    border: 1px solid #3145b6;
+    border-radius: 20px;
+    padding: 2px 15px;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.link-list .more:hover {
+    color: white;
+    background-color: #3145b6;
+    border: 1px solid #3145b6;
+    text-decoration: none;
+}
+
+span .white {
+    color: white;
+    border: none;
+}
+
+span .white:hover {
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+
+#myUL {
+    list-style: none;
+}
+
+.cards {
+    color: #212529;
+    padding: 0;
+}
+
+.cards:hover {
+    color: #212529;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
 
 .row .col-6 {
     text-align: center;
     padding: 10px 20px;
     border-radius: 20px;
+}
+
+.row .countries {
+    margin: 20px 0;
+}
+
+#myInput {
+    border: none;
+    width: 250px;
+    border-bottom: 1px solid #3145b6;
 }

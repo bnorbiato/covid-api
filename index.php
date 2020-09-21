@@ -20,35 +20,51 @@ $covid = json_decode(curl_exec($ch));
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet">
 
-        <title>covid api</title>
+        <title>covid19 api</title>
     </head>
 
     <body>
         <div class="menu">
             <div class="container">
-                <h2>covid status</h2>
-                <a href="countries.php">see all countries</a>
+                <h2>covid19 status</h2>
+                <p class="subtitle">see and follow statistics from around the world</p>
             </div>
         </div>
 
         <div class="cases">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
                         <h3>cases</h3>
                         <div class="numbers">
                             <p><strong>New confirmed: </strong><?=$covid->Global->NewConfirmed?></p>
                             <p><strong>Total confirmed: </strong><?=$covid->Global->TotalConfirmed?></p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <h3>deaths</h3>
                         <div class="numbers">
                             <p><strong>New deaths: </strong><?=$covid->Global->NewDeaths?></p>
                             <p><strong>Total deaths: </strong><?=$covid->Global->TotalDeaths?></p>
                         </div>
                     </div>
+                    <div class="col-4">
+                        <h3>recovered</h3>
+                        <div class="numbers">
+                            <p><strong>New recovered: </strong><?=$covid->Global->NewRecovered?></p>
+                            <p><strong>Total recovered: </strong><?=$covid->Global->TotalRecovered?></p>
+                        </div>
+                    </div>
                 </div>
+                <div class="link-list">
+                    <a href="countries.php" class="more">click here to see all countries</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="orientations">
+            <div class="container">
+                <h3>orientations</h3>
             </div>
         </div>
     
