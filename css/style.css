@@ -146,9 +146,46 @@ span .white:hover {
     color: white;
     padding-bottom: 10px;
 }
-  
+
 .tabcontent {
     display: none;
     padding: 20px 15px;
     border-top: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100vw !important;
+        padding: 30px 20px !important;
+    }
+
+    .cases {
+        margin: 0;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .col-4 {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tab {
+        display: block;
+    }
+
+    .tablinks {
+        display: block;
+        width: 100%;
+    }
+
+    .search {
+        text-align: center;
+    }
+
+    #myUL {
+        padding: 0 20px;
+    }
 }
